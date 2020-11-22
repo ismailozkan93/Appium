@@ -13,7 +13,7 @@ import java.net.URL;
 
 public class BrowserStackAndroid {
 
-         String USERNAME = "ahmetyildiz1";
+         String USERNAME = "ismailozkan1";
          String AUTOMATE_KEY = "UvDC7kXzSHn16FiSA6u8";
          String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 

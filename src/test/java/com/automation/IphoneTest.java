@@ -1,7 +1,12 @@
 package com.automation;
 
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
 import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class IphoneTest {
     public static final String USERNAME = "ismailozkan1";
@@ -10,7 +15,7 @@ public class IphoneTest {
 
 
     @Test
-    public void iphone11Pro(){
+    public void iphone11Pro() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
 
         caps.setCapability("browserName", "iPhone");
@@ -20,6 +25,8 @@ public class IphoneTest {
         caps.setCapability("build", "iPhone 11 ");
         caps.setCapability("name", "ismailozkan1's First Test");
         caps.setCapability("app", "bs://a2f1c80f55e8b78bd076be4fba9df80da7438464");
+
+        IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(new URL(URL),caps);
 
 
 
