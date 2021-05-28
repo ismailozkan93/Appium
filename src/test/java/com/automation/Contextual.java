@@ -70,7 +70,7 @@ public class Contextual {
         desiredCapabilities.setCapability("deviceName", "Pixel_2");
         desiredCapabilities.setCapability("automationName", "UiAutomator2");
         desiredCapabilities.setCapability("app", System.getProperty("user.dir")+"/apidemos.apk");
-
+                                                        //proje pc de nerdeyse oraya kadar götürür.
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http:localhost:4723/wd/hub"), desiredCapabilities);
 
         Thread.sleep(5000);

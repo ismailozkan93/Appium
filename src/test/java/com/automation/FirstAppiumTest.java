@@ -16,14 +16,14 @@ public class FirstAppiumTest {
 
     DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
-    desiredCapabilities.setCapability("platformName","Android");
+    desiredCapabilities.setCapability("platformName","Android");//device baglanma
         desiredCapabilities.setCapability("platformVersion","7.0");
         desiredCapabilities.setCapability("deviceName","Pixel_2");
         desiredCapabilities.setCapability("automationName","UiAutomator2");
         desiredCapabilities.setCapability("app","C:\\Users\\admin\\IdeaProjects\\AppiumAutomation\\etsy.apk");
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http:localhost:4723/wd/hub"),desiredCapabilities);
-        Thread.sleep(5000);
+        Thread.sleep(5000);             //remote driver kullaniriz,uzaktan bir sunucuya baglanir.
 
         WebElement getStarted = driver.findElementById("com.etsy.android:id/btn_link");
         getStarted.click();

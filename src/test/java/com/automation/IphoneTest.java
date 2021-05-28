@@ -23,8 +23,8 @@ public class IphoneTest {
         caps.setCapability("realMobile", "true");
         caps.setCapability("os_version", "13");
         caps.setCapability("build", "iPhone 11 ");
-        caps.setCapability("name", "ismailozkan1's First Test");
-        caps.setCapability("app", "bs://a2f1c80f55e8b78bd076be4fba9df80da7438464");
+        caps.setCapability("name", "ismailozkan1's second Test");
+        caps.setCapability("app", "bs://6fde15d5e82f15bef374626325df5d0de5fb87ca");
 
         IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(new URL(URL),caps);
 
@@ -34,3 +34,7 @@ public class IphoneTest {
 
     }
 }
+/*
+curl -u "ismailozkan1:mCViujwDRKzsat5NiLoh" -X POST "https://api-cloud.browserstack.com/app-automate/upload"  -F "file=@C:\Users\admin\IdeaProjects\AppiumAutomation\BStackSampleApp.ipa"
+
+ */

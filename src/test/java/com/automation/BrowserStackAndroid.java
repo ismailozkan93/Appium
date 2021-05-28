@@ -14,7 +14,7 @@ import java.net.URL;
 public class BrowserStackAndroid {
 
          String USERNAME = "ismailozkan1";
-         String AUTOMATE_KEY = "UvDC7kXzSHn16FiSA6u8";
+         String AUTOMATE_KEY = "mCViujwDRKzsat5NiLoh";
          String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
         @Test
@@ -27,7 +27,7 @@ public class BrowserStackAndroid {
             caps.setCapability("realMobile", "true");
             caps.setCapability("os_version", "9.0");
             caps.setCapability("name", "Galaxys10e First Test");
-            caps.setCapability("app", "bs://e74b65958287888255d92859bb5f9fc00d7a2008");
+            caps.setCapability("app", "bs://6639fd5d979a6b81c4c3f7f0579282a2cbacc055");
 
             AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL(URL),caps);
 
@@ -58,7 +58,15 @@ public class BrowserStackAndroid {
 
 //"bs://e74b65958287888255d92859bb5f9fc00d7a2008"}
 //curl -u "ahmetyildiz1:UvDC7kXzSHn16FiSA6u8" -X POST "https://api-cloud.browserstack.com/app-automate/upload"  -F "file=@C:\\Users\\admin\\IdeaProjects\\AppiumAutomation\\apidemos.apk"
+        /*
+curl -u "ismailozkan1:mCViujwDRKzsat5NiLoh" \
+-X POST "https://api-cloud.browserstack.com/app-automate/upload" \xposttan önce 1 bosluk
+-F "file=@/path/to/app/file/Application-debug.apk//-f file dan önce 2 bosluk
+             //apidemodan baglanti alinip kopyalanir
+ cmd ekranina kopyalanir ve alinan url(response)app kismina yapistirilir.
+ */
 
-
-
+/*
+curl -u "ismailozkan1:mCViujwDRKzsat5NiLoh" -X POST "https://api-cloud.browserstack.com/app-automate/upload"  -F "file=@C:\\Users\\admin\\IdeaProjects\\AppiumAutomation\\apidemos.apk"
+ */
 }
