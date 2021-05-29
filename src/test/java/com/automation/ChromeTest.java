@@ -26,10 +26,17 @@ public class ChromeTest {
         desiredCapabilities.setCapability("browserName","chrome");
 
         Thread.sleep(3000);
+
+        WebDriverManager.chromedriver().version("2.23").setup();
+        desiredCapabilities.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE,
+                WebDriverManager.chromedriver().getBinaryPath());
+
         RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4723/wd/hub"),desiredCapabilities);
+
 
         Thread.sleep(3000);
 
+        //driver.get("http://zero.webappsecurity.com/login.html");
         /*driver.get("http://zero.webappsecurity.com/login.html");
         WebElement user = driver.findElement(By.id("user_login"));
         WebElement password= driver.findElement(By.id("user_password"));
